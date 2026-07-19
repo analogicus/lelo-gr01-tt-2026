@@ -1,0 +1,247 @@
+** sch_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_GR01_SKY130A/tt_um_lelo_gr01_analogicus.sch
+.subckt tt_um_lelo_gr01_analogicus uo_out<7> uo_out<6> uo_out<5> uo_out<4> uo_out<3> uo_out<2>
++ uio_out<7> uio_out<6> uio_out<5> uio_out<4> uio_out<3> uio_out<2> uio_out<1> uio_out<0> uio_oe<7> uio_oe<6> uio_oe<5> uio_oe<4> uio_oe<3> uio_oe<2> uio_oe<1> uio_oe<0> VDPWR VGND
++ ui_in<7> ui_in<6> ui_in<5> ui_in<4> ui_in<3> ui_in<2> ui_in<1> ui_in<0> uio_in<7> uio_in<6> uio_in<5> uio_in<4> uio_in<3> uio_in<2> uio_in<1> uio_in<0> ena rst_n clk uo_out<0> uo_out<1>
+*.opin uo_out<7> uo_out<6> uo_out<5> uo_out<4> uo_out<3> uo_out<2>
+*.opin uio_out<7> uio_out<6> uio_out<5> uio_out<4> uio_out<3> uio_out<2> uio_out<1> uio_out<0>
+*.opin uio_oe<7> uio_oe<6> uio_oe<5> uio_oe<4> uio_oe<3> uio_oe<2> uio_oe<1> uio_oe<0>
+*.ipin VDPWR
+*.ipin VGND
+*.ipin ui_in<7> ui_in<6> ui_in<5> ui_in<4> ui_in<3> ui_in<2> ui_in<1> ui_in<0>
+*.ipin uio_in<7> uio_in<6> uio_in<5> uio_in<4> uio_in<3> uio_in<2> uio_in<1> uio_in<0>
+*.ipin ena
+*.ipin rst_n
+*.ipin clk
+*.opin uo_out<0>
+*.opin uo_out<1>
+*  x8 -  JNWTR_TAPCELLB_CV  IS MISSING !!!!
+*  x9 -  JNWTR_TIEL_CV  IS MISSING !!!!
+R1<7> TIE_L uio_oe<7> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
+R1<6> TIE_L uio_oe<6> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
+R1<5> TIE_L uio_oe<5> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
+R1<4> TIE_L uio_oe<4> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
+R1<3> TIE_L uio_oe<3> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
+R1<2> TIE_L uio_oe<2> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
+R1<1> TIE_L uio_oe<1> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
+R1<0> TIE_L uio_oe<0> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
+x1 VDPWR uo_out<0> net1 VGND LELO_GR01
+x2 VDPWR VGND clk pwrup_digital net2 uo_out<1> ui_in<0> uio_out<7> uio_out<6> uio_out<5> uio_out<4> uio_out<3> uio_out<2>
++ uio_out<1> uio_out<0> uo_out<0> digital
+*  x3 -  JNWTR_IVX1_CV  IS MISSING !!!!
+*  x4 -  JNWTR_ORX1_CV  IS MISSING !!!!
+XD1<2> VGND ui_in<0> sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=1.8e6
+XD1<1> VGND ui_in<1> sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=1.8e6
+XD1<0> VGND rst_n sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=1.8e6
+.ends
+
+* expanding   symbol:  LELO_GR01_SKY130A/LELO_GR01.sym # of pins=4
+** sym_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_GR01_SKY130A/LELO_GR01.sym
+** sch_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_GR01_SKY130A/LELO_GR01.sch
+.subckt LELO_GR01 VDD_1V8 OSC_TEMP_1V8 PWRUP_1V8 VSS
+*.ipin VDD_1V8
+*.ipin VSS
+*.ipin PWRUP_1V8
+*.opin OSC_TEMP_1V8
+x7 net1 VREF PWRUP_1V8 VDD_1V8 VSS PWRUP_N_1V8 bandgap
+x8 OSC_TEMP_1V8 VDD_1V8 VSS net1 VREF PWRUP_1V8 PWRUP_N_1V8 oscillator
+*  x3 -  JNWTR_IVX1_CV  IS MISSING !!!!
+.ends
+
+
+* expanding   symbol:  LELO_GR01_SKY130A/digital.sym # of pins=9
+** sym_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_GR01_SKY130A/digital.sym
+** sch_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_GR01_SKY130A/digital.sch
+.subckt digital VPWR VGND clk pwr rst done request out<7> out<6> out<5> out<4> out<3> out<2> out<1> out<0> oscillator_clk
+*.ipin clk
+*.ipin rst
+*.ipin request
+*.ipin oscillator_clk
+*.opin pwr
+*.opin done
+*.opin out<7> out<6> out<5> out<4> out<3> out<2> out<1> out<0>
+*.ipin VGND
+*.ipin VPWR
+.ends
+
+
+* expanding   symbol:  LELO_GR01_SKY130A/bandgap.sym # of pins=6
+** sym_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_GR01_SKY130A/bandgap.sym
+** sch_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_GR01_SKY130A/bandgap.sch
+.subckt bandgap IPTAT VREF PWRUP_1V8 VDD_1V8 VSS PWRUP_N_1V8
+*.ipin VDD_1V8
+*.ipin VSS
+*.opin IPTAT
+*.opin VREF
+*.ipin PWRUP_1V8
+*.ipin PWRUP_N_1V8
+x5 VIN VOUT VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x3<7> VIP VOUT VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x3<6> VIP VOUT VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x3<5> VIP VOUT VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x3<4> VIP VOUT VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x3<3> VIP VOUT VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x3<2> VIP VOUT VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x3<1> VIP VOUT VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x3<0> VIP VOUT VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+*  xd1<4> xd1<3> xd1<2> xd1<1> xd1<0> -  JNWTR_CAPX1  IS MISSING !!!!
+*  x2 -  JNWTR_RPPO8  IS MISSING !!!!
+*  x3 -  JNWTR_RPPO4  IS MISSING !!!!
+x4<3> VOUT START_G VS1 VSS LELOATR_LVT_NCH_2C5F0
+x4<2> VOUT START_G VS1 VSS LELOATR_LVT_NCH_2C5F0
+x4<1> VOUT START_G VS1 VSS LELOATR_LVT_NCH_2C5F0
+x4<0> VOUT START_G VS1 VSS LELOATR_LVT_NCH_2C5F0
+x6<3> VS1 VS1 net2 VSS LELOATR_LVT_NCH_2C5F0
+x6<2> VS1 VS1 net2 VSS LELOATR_LVT_NCH_2C5F0
+x6<1> VS1 VS1 net2 VSS LELOATR_LVT_NCH_2C5F0
+x6<0> VS1 VS1 net2 VSS LELOATR_LVT_NCH_2C5F0
+x7 VSS VIN net2 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x8 VREF VOUT VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+*  x9 -  JNWTR_RPPO16  IS MISSING !!!!
+*  x10 -  JNWTR_RPPO16  IS MISSING !!!!
+*  x11 -  JNWTR_RPPO16  IS MISSING !!!!
+x1 VDD_1V8 VIN VIP VOUT VSS PWRUP_1V8 PWRUP_N_1V8 diffamp_2
+*  x6 -  JNWTR_RPPO8  IS MISSING !!!!
+x13 IPTAT VOUT VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x16 VOUT PWRUP_1V8 VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x17 START_G PWRUP_N_1V8 net16 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x18 START_G VOUT VSS VSS LELOATR_LVT_NCH_2C5F0
+x19 net16 PWRUP_N_1V8 net15 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x20 net15 PWRUP_N_1V8 net14 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x21 net14 PWRUP_N_1V8 net13 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x22 net13 PWRUP_N_1V8 net10 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x23 net10 PWRUP_N_1V8 net11 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x24 net11 PWRUP_N_1V8 net12 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x25 net12 PWRUP_N_1V8 net6 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+*  x26 -  JNWTR_RPPO8  IS MISSING !!!!
+*  x27 -  JNWTR_RPPO8  IS MISSING !!!!
+*  x4 -  JNWTR_RPPO2  IS MISSING !!!!
+*  x12 -  JNWTR_RPPO2  IS MISSING !!!!
+*  x14 -  JNWTR_RPPO2  IS MISSING !!!!
+*  x30 -  JNWTR_RPPO16  IS MISSING !!!!
+*  x31 -  JNWTR_RPPO16  IS MISSING !!!!
+*  x29 -  JNWTR_RPPO2  IS MISSING !!!!
+x15 net19 VIP VSS Diodes
+x28 net17 VSS pnp_fix
+.ends
+
+
+* expanding   symbol:  LELO_GR01_SKY130A/oscillator.sym # of pins=7
+** sym_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_GR01_SKY130A/oscillator.sym
+** sch_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_GR01_SKY130A/oscillator.sch
+.subckt oscillator VOUT_OSC VDD_1V8 VSS IBP_BG VREF_BG PWRUP_1V8 PWRUP_N_1V8
+*.ipin VSS
+*.ipin VDD_1V8
+*.opin VOUT_OSC
+*.ipin VREF_BG
+*.ipin IBP_BG
+*.ipin PWRUP_1V8
+*.ipin PWRUP_N_1V8
+x1 VDD_1V8 IBP_BG VREF_BG net3 VSS PWRUP_1V8 PWRUP_N_1V8 diffamp_2
+*  xd1<4> xd1<3> xd1<2> xd1<1> xd1<0> -  JNWTR_CAPX1  IS MISSING !!!!
+x4 IBP_BG net2 VSS VSS LELOATR_LVT_NCH_2C5F0
+*  x5 -  JNWTR_DFRNQNX1_CV  IS MISSING !!!!
+x6 IBP_BG PWRUP_N_1V8 VSS VSS LELOATR_LVT_NCH_2C5F0
+*  x2 -  JNWTR_IVX1_CV  IS MISSING !!!!
+*  x3 -  JNWTR_IVX1_CV  IS MISSING !!!!
+x8 net4 PWRUP_N_1V8 VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x7 net3 PWRUP_N_1V8 VSS VSS LELOATR_LVT_NCH_2C5F0
+.ends
+
+
+* expanding   symbol:  LELO_ATR_SKY130A/LELOATR_LVT_PCH_2C5F0.sym # of pins=4
+** sym_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_ATR_SKY130A/LELOATR_LVT_PCH_2C5F0.sym
+** sch_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_ATR_SKY130A/LELOATR_LVT_PCH_2C5F0.sch
+.subckt LELOATR_LVT_PCH_2C5F0 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__pfet_01v8_lvt L=0.94 W=1.92 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  LELO_ATR_SKY130A/LELOATR_LVT_NCH_2C5F0.sym # of pins=4
+** sym_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_ATR_SKY130A/LELOATR_LVT_NCH_2C5F0.sym
+** sch_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_ATR_SKY130A/LELOATR_LVT_NCH_2C5F0.sch
+.subckt LELOATR_LVT_NCH_2C5F0 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__nfet_01v8_lvt L=0.94 W=1.92 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  LELO_GR01_SKY130A/diffamp_2.sym # of pins=7
+** sym_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_GR01_SKY130A/diffamp_2.sym
+** sch_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_GR01_SKY130A/diffamp_2.sch
+.subckt diffamp_2 VDD_1V8 VIN VIP VOUT VSS PWRUP_1V8 PWRUP_N_1V8
+*.ipin VDD_1V8
+*.ipin VIN
+*.ipin VIP
+*.opin VOUT
+*.ipin PWRUP_N_1V8
+*.ipin PWRUP_1V8
+*.ipin VSS
+x1 net1 VIN TAIL VSS LELOATR_LVT_NCH_2C5F0
+x2 net1 net1 VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x4 VOUT net1 VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+x3 VOUT VIP TAIL VSS LELOATR_LVT_NCH_2C5F0
+x5 VDD_1V8 TAIL VSS PWRUP_N_1V8 GM_cell_N
+x7 net1 PWRUP_1V8 VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+.ends
+
+
+* expanding   symbol:  LELO_GR01_SKY130A/Diodes.sym # of pins=3
+** sym_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_GR01_SKY130A/Diodes.sym
+** sch_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_GR01_SKY130A/Diodes.sch
+.subckt Diodes I1 I2 VSS
+*.opin VSS
+*.ipin I2
+*.ipin I1
+XQ1<7> VSS VSS I1 sky130_fd_pr__pnp_05v5_W3p40L3p40 m=1 mult=1
+XQ1<6> VSS VSS I1 sky130_fd_pr__pnp_05v5_W3p40L3p40 m=1 mult=1
+XQ1<5> VSS VSS I1 sky130_fd_pr__pnp_05v5_W3p40L3p40 m=1 mult=1
+XQ1<4> VSS VSS I1 sky130_fd_pr__pnp_05v5_W3p40L3p40 m=1 mult=1
+XQ1<3> VSS VSS I1 sky130_fd_pr__pnp_05v5_W3p40L3p40 m=1 mult=1
+XQ1<2> VSS VSS I1 sky130_fd_pr__pnp_05v5_W3p40L3p40 m=1 mult=1
+XQ1<1> VSS VSS I1 sky130_fd_pr__pnp_05v5_W3p40L3p40 m=1 mult=1
+XQ1<0> VSS VSS I1 sky130_fd_pr__pnp_05v5_W3p40L3p40 m=1 mult=1
+XQ2 VSS VSS I2 sky130_fd_pr__pnp_05v5_W3p40L3p40 m=1 mult=1
+.ends
+
+
+* expanding   symbol:  LELO_GR01_SKY130A/pnp_fix.sym # of pins=2
+** sym_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_GR01_SKY130A/pnp_fix.sym
+** sch_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_GR01_SKY130A/pnp_fix.sch
+.subckt pnp_fix e VSS
+*.opin VSS
+*.ipin e
+XQ3 VSS VSS e sky130_fd_pr__pnp_05v5_W3p40L3p40 m=1 mult=1
+.ends
+
+
+* expanding   symbol:  LELO_GR01_SKY130A/GM_cell_N.sym # of pins=4
+** sym_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_GR01_SKY130A/GM_cell_N.sym
+** sch_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/LELO_GR01_SKY130A/GM_cell_N.sch
+.subckt GM_cell_N VDD_1V8 IBN VSS PWRUP_N_1V8
+*.ipin VDD_1V8
+*.ipin IBN
+*.opin VSS
+*.ipin PWRUP_N_1V8
+*  x6 -  JNWTR_RPPO4  IS MISSING !!!!
+x9<2> IBN net1 VSS VSS LELOATR_LVT_NCH_2C5F0
+x9<1> IBN net1 VSS VSS LELOATR_LVT_NCH_2C5F0
+x9<0> IBN net1 VSS VSS LELOATR_LVT_NCH_2C5F0
+x5 net1 net1 VSS VSS LELOATR_LVT_NCH_2C5F0
+x2 net4 net1 VSS VSS LELOATR_LVT_NCH_2C5F0
+x1 net1 PWRUP_N_1V8 VSS VSS LELOATR_LVT_NCH_2C5F0
+x7 net4 net4 net1 VSS LELOATR_LVT_NCH_2C5F0
+x8 net4 net4 net2 net2 LELOATR_LVT_PCH_2C5F0
+x3 net1 net4 net3 net3 LELOATR_LVT_PCH_2C5F0
+x4 net2 PWRUP_N_1V8 VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_2C5F0
+.ends
+
+.end
