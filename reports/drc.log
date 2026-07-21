@@ -120,7 +120,7 @@ Cell sky130_fd_sc_hd__a41o_2 read from path /opt/pdk/share/pdk/sky130A/libs.ref/
 Cell sky130_fd_sc_hd__and4_2 read from path /opt/pdk/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__and3_2 read from path /opt/pdk/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Processing timestamp mismatches.
-Timestamp mismatches found in these cells: oscillator, JNWTR_CAPX1, JNWTR_DFRNQNX1_CV, JNWTR_cut_M1M2_2x1, JNWTR_cut_M1M3_2x1, JNWTR_NDTRIX1_CV, JNWTR_IVTRIX1_CV, JNWTR_NDX1_CV, JNWTR_TAPCELLB_CV, LELOATR_LVT_PCH_2C5F0, LELOATR_LVT_NCH_2C5F0, JNWTR_RES4, diffamp_2, JNWTR_RPPO4, JNWTR_RPPO16, JNWTR_RES16, JNWTR_RPPO2, JNWTR_RES2, JNWTR_RPPO8, JNWTR_RES8, JNWTR_TIEL_CV, JNWTR_IVX1_CV, JNWTR_ORX1_CV, JNWTR_NCHDL, JNWTR_PCHDL, JNWTR_cut_M1M4_2x1, JNWTR_NRX1_CV.
+Timestamp mismatches found in these cells: JNWTR_DFRNQNX1_CV, JNWTR_cut_M1M2_2x1, JNWTR_cut_M1M3_2x1, JNWTR_NDTRIX1_CV, JNWTR_IVTRIX1_CV, JNWTR_NDX1_CV, JNWTR_TAPCELLB_CV, JNWTR_RES4, JNWTR_RPPO4, JNWTR_RPPO16, JNWTR_RES16, JNWTR_RPPO2, JNWTR_RES2, JNWTR_RPPO8, JNWTR_RES8, JNWTR_TIEL_CV, JNWTR_IVX1_CV, JNWTR_ORX1_CV, JNWTR_NCHDL, JNWTR_PCHDL, JNWTR_cut_M1M4_2x1, JNWTR_NRX1_CV.
 DRC style is now "drc(full)"
 Loading DRC CIF style.
 No errors found.

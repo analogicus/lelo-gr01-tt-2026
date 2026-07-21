@@ -122,7 +122,7 @@ Cell sky130_fd_sc_hd__a41o_2 read from path /opt/pdk/share/pdk/sky130A/libs.ref/
 Cell sky130_fd_sc_hd__and4_2 read from path /opt/pdk/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Cell sky130_fd_sc_hd__and3_2 read from path /opt/pdk/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag
 Processing timestamp mismatches.
-Timestamp mismatches found in these cells: oscillator, JNWTR_CAPX1, JNWTR_DFRNQNX1_CV, JNWTR_cut_M1M2_2x1, JNWTR_cut_M1M3_2x1, JNWTR_NDTRIX1_CV, JNWTR_IVTRIX1_CV, JNWTR_NDX1_CV, JNWTR_TAPCELLB_CV, LELOATR_LVT_PCH_2C5F0, LELOATR_LVT_NCH_2C5F0, JNWTR_RES4, diffamp_2, JNWTR_RPPO4, JNWTR_RPPO16, JNWTR_RES16, JNWTR_RPPO2, JNWTR_RES2, JNWTR_RPPO8, JNWTR_RES8, JNWTR_TIEL_CV, JNWTR_IVX1_CV, JNWTR_ORX1_CV, JNWTR_NCHDL, JNWTR_PCHDL, JNWTR_cut_M1M4_2x1, JNWTR_NRX1_CV.
+Timestamp mismatches found in these cells: JNWTR_DFRNQNX1_CV, JNWTR_cut_M1M2_2x1, JNWTR_cut_M1M3_2x1, JNWTR_NDTRIX1_CV, JNWTR_IVTRIX1_CV, JNWTR_NDX1_CV, JNWTR_TAPCELLB_CV, JNWTR_RES4, JNWTR_RPPO4, JNWTR_RPPO16, JNWTR_RES16, JNWTR_RPPO2, JNWTR_RES2, JNWTR_RPPO8, JNWTR_RES8, JNWTR_TIEL_CV, JNWTR_IVX1_CV, JNWTR_ORX1_CV, JNWTR_NCHDL, JNWTR_PCHDL, JNWTR_cut_M1M4_2x1, JNWTR_NRX1_CV.
 Extracting JNWTR_NCHDL into ant/ext/JNWTR_NCHDL.ext:
 Extracting JNWTR_PCHDL into ant/ext/JNWTR_PCHDL.ext:
 Extracting JNWTR_cut_M1M4_2x1 into ant/ext/JNWTR_cut_M1M4_2x1.ext:
@@ -133,13 +133,13 @@ Extracting JNWTR_NRX1_CV into ant/ext/JNWTR_NRX1_CV.ext:
 Extracting JNWTR_ORX1_CV into ant/ext/JNWTR_ORX1_CV.ext:
 Extracting sky130_fd_pr__diode_pw2nd_05v5_lc into ant/ext/sky130_fd_pr__diode_pw2nd_05v5_lc.ext:
 sky130_fd_pr__diode_pw2nd_05v5_lc: 1 warning
-Extracting JNWTR_CAPX1 into ant/ext/JNWTR_CAPX1.ext:
 Extracting JNWTR_cut_M1M2_2x1 into ant/ext/JNWTR_cut_M1M2_2x1.ext:
 Extracting JNWTR_cut_M1M3_2x1 into ant/ext/JNWTR_cut_M1M3_2x1.ext:
 Extracting JNWTR_NDTRIX1_CV into ant/ext/JNWTR_NDTRIX1_CV.ext:
 Extracting JNWTR_IVTRIX1_CV into ant/ext/JNWTR_IVTRIX1_CV.ext:
 Extracting JNWTR_NDX1_CV into ant/ext/JNWTR_NDX1_CV.ext:
 Extracting JNWTR_DFRNQNX1_CV into ant/ext/JNWTR_DFRNQNX1_CV.ext:
+Extracting JNWTR_CAPX1 into ant/ext/JNWTR_CAPX1.ext:
 Extracting LELOATR_LVT_PCH_2C5F0 into ant/ext/LELOATR_LVT_PCH_2C5F0.ext:
 Extracting LELOATR_LVT_NCH_2C5F0 into ant/ext/LELOATR_LVT_NCH_2C5F0.ext:
 Extracting JNWTR_RES4 into ant/ext/JNWTR_RES4.ext:
@@ -184,19 +184,17 @@ Extracting sky130_fd_sc_hd__a41o_2 into ant/ext/sky130_fd_sc_hd__a41o_2.ext:
 Extracting sky130_fd_sc_hd__and4_2 into ant/ext/sky130_fd_sc_hd__and4_2.ext:
 Extracting sky130_fd_sc_hd__and3_2 into ant/ext/sky130_fd_sc_hd__and3_2.ext:
 Extracting digital into ant/ext/digital.ext:
-digital: 4 warnings
 Extracting tt_um_lelo_gr01_analogicus into ant/ext/tt_um_lelo_gr01_analogicus.ext:
-Total of 7 warnings.
+Total of 3 warnings.
 Reading extract file.
 Building flattened netlist.
-connect(1): no such node LELO_GR01_0/x7/x6<2>/a_928_n40#
-connect(2): no such node LELO_GR01_0/x7/x6<2>/a_928_n40#
 connect(1): no such node LELO_GR01_0/x7/x6<3>/a_928_n40#
 connect(2): no such node LELO_GR01_0/x7/x6<3>/a_928_n40#
+connect(1): no such node LELO_GR01_0/x7/x6<2>/a_928_n40#
+connect(2): no such node LELO_GR01_0/x7/x6<2>/a_928_n40#
+connect(1): no such node LELO_GR01_0/x7/x6<1>/a_928_n40#
 connect(1): no such node LELO_GR01_0/x7/x6<0>/a_928_n40#
 connect(2): no such node LELO_GR01_0/x7/x6<0>/a_928_n40#
-connect(1): no such node LELO_GR01_0/x7/x6<1>/a_928_n40#
-connect(2): no such node LELO_GR01_0/x7/x6<1>/a_928_n40#
 Running antenna checks.
    100 gates analyzed.
    200 gates analyzed.

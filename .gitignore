@@ -4,6 +4,7 @@
 *.vcd
 runs
 tt_submission
+precheck_run
 src/user_config.tcl
 test/sim_build
 test/__pycache__/

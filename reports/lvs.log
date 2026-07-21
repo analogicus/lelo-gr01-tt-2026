@@ -522,8 +522,8 @@ Netlists match uniquely.
 Subcircuit pins:
 Circuit 1: diffamp_2                       |Circuit 2: diffamp_2                       
 -------------------------------------------|-------------------------------------------
-VDD_1V8                                    |VDD_1V8                                    
 VOUT                                       |VOUT                                       
+VDD_1V8                                    |VDD_1V8                                    
 VSS                                        |VSS                                        
 VIN                                        |VIN                                        
 VIP                                        |VIP                                        
