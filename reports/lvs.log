@@ -343,6 +343,8 @@ Circuit 1: sky130_fd_pr__cap_mim_m3_1      |Circuit 2: sky130_fd_pr__cap_mim_m3_
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__cap_mim_m3_1 and sky130_fd_pr__cap_mim_m3_1 are equivalent.
 
+Cell JNWTR_TAPCELLB_CV (0) disconnected node: MN1/a_270_n16#
+Cell JNWTR_TAPCELLB_CV (0) disconnected node: MP1/a_120_n16#
 Cell JNWTR_TAPCELLB_CV (0) disconnected node: MN1/a_270_304#
 Cell JNWTR_TAPCELLB_CV (0) disconnected node: MP1/a_120_304#
 Subcircuit summary:
@@ -360,6 +362,8 @@ Circuit 1: JNWTR_TAPCELLB_CV               |Circuit 2: JNWTR_TAPCELLB_CV
 -------------------------------------------|-------------------------------------------
 AVSS                                       |AVSS                                       
 AVDD                                       |AVDD                                       
+MN1/a_270_n16#                             |(no matching pin)                          
+MP1/a_120_n16#                             |(no matching pin)                          
 MN1/a_270_304#                             |(no matching pin)                          
 MP1/a_120_304#                             |(no matching pin)                          
 ---------------------------------------------------------------------------------------
@@ -518,8 +522,8 @@ Netlists match uniquely.
 Subcircuit pins:
 Circuit 1: diffamp_2                       |Circuit 2: diffamp_2                       
 -------------------------------------------|-------------------------------------------
-VOUT                                       |VOUT                                       
 VDD_1V8                                    |VDD_1V8                                    
+VOUT                                       |VOUT                                       
 VSS                                        |VSS                                        
 VIN                                        |VIN                                        
 VIP                                        |VIP                                        
@@ -621,8 +625,8 @@ Subcircuit pins:
 Circuit 1: Diodes                          |Circuit 2: Diodes                          
 -------------------------------------------|-------------------------------------------
 VSS                                        |VSS                                        
-I1                                         |I1                                         
 I2                                         |I2                                         
+I1                                         |I1                                         
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes Diodes and Diodes are equivalent.
@@ -783,6 +787,8 @@ Circuit 1: sky130_fd_pr__diode_pw2nd_05v5  |Circuit 2: sky130_fd_pr__diode_pw2nd
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__diode_pw2nd_05v5 and sky130_fd_pr__diode_pw2nd_05v5 are equivalent.
 
+Cell JNWTR_ORX1_CV (0) disconnected node: XA2/MN0/a_270_304#
+Cell JNWTR_ORX1_CV (0) disconnected node: XA2/MP0/a_120_304#
 Subcircuit summary:
 Circuit 1: JNWTR_ORX1_CV                   |Circuit 2: JNWTR_ORX1_CV                   
 -------------------------------------------|-------------------------------------------
@@ -932,27 +938,27 @@ Port matching may fail to disambiguate symmetries.
   Flattening non-matched subcircuits JNWTR_TIEL_CV JNWTR_TIEL_CV
 Flattening unmatched subcell sky130_fd_pr__diode_pw2nd_05v5_lc in circuit tt_um_lelo_gr01_analogicus (0)(3 instances)
 
-Cell tt_um_lelo_gr01_analogicus (0) disconnected node: ena
-Cell tt_um_lelo_gr01_analogicus (0) disconnected node: ui_in[2]
-Cell tt_um_lelo_gr01_analogicus (0) disconnected node: ui_in[3]
-Cell tt_um_lelo_gr01_analogicus (0) disconnected node: ui_in[4]
-Cell tt_um_lelo_gr01_analogicus (0) disconnected node: ui_in[5]
-Cell tt_um_lelo_gr01_analogicus (0) disconnected node: ui_in[6]
-Cell tt_um_lelo_gr01_analogicus (0) disconnected node: ui_in[7]
-Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uio_in[0]
-Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uio_in[1]
-Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uio_in[2]
-Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uio_in[3]
-Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uio_in[4]
-Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uio_in[5]
-Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uio_in[6]
-Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uio_in[7]
-Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uo_out[2]
-Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uo_out[3]
-Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uo_out[4]
-Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uo_out[5]
-Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uo_out[6]
 Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uo_out[7]
+Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uo_out[6]
+Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uo_out[5]
+Cell tt_um_lelo_gr01_analogicus (0) disconnected node: ui_in[4]
+Cell tt_um_lelo_gr01_analogicus (0) disconnected node: ui_in[3]
+Cell tt_um_lelo_gr01_analogicus (0) disconnected node: ui_in[2]
+Cell tt_um_lelo_gr01_analogicus (0) disconnected node: ena
+Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uio_in[4]
+Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uio_in[3]
+Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uio_in[2]
+Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uio_in[1]
+Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uio_in[0]
+Cell tt_um_lelo_gr01_analogicus (0) disconnected node: ui_in[7]
+Cell tt_um_lelo_gr01_analogicus (0) disconnected node: ui_in[6]
+Cell tt_um_lelo_gr01_analogicus (0) disconnected node: ui_in[5]
+Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uo_out[4]
+Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uo_out[3]
+Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uo_out[2]
+Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uio_in[7]
+Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uio_in[6]
+Cell tt_um_lelo_gr01_analogicus (0) disconnected node: uio_in[5]
 Cell tt_um_lelo_gr01_analogicus (1) disconnected node: uo_out[7]
 Cell tt_um_lelo_gr01_analogicus (1) disconnected node: uo_out[6]
 Cell tt_um_lelo_gr01_analogicus (1) disconnected node: uo_out[5]
@@ -1018,27 +1024,27 @@ rst_n                                      |rst_n
 ui_in[1]                                   |ui_in[1]                                   
 VGND                                       |VGND                                       
 VDPWR                                      |VDPWR                                      
-ena                                        |ena                                        
-ui_in[2]                                   |ui_in[2]                                   
-ui_in[3]                                   |ui_in[3]                                   
-ui_in[4]                                   |ui_in[4]                                   
-ui_in[5]                                   |ui_in[5]                                   
-ui_in[6]                                   |ui_in[6]                                   
-ui_in[7]                                   |ui_in[7]                                   
-uio_in[0]                                  |uio_in[0]                                  
-uio_in[1]                                  |uio_in[1]                                  
-uio_in[2]                                  |uio_in[2]                                  
-uio_in[3]                                  |uio_in[3]                                  
-uio_in[4]                                  |uio_in[4]                                  
-uio_in[5]                                  |uio_in[5]                                  
-uio_in[6]                                  |uio_in[6]                                  
-uio_in[7]                                  |uio_in[7]                                  
-uo_out[2]                                  |uo_out[2]                                  
-uo_out[3]                                  |uo_out[3]                                  
-uo_out[4]                                  |uo_out[4]                                  
-uo_out[5]                                  |uo_out[5]                                  
-uo_out[6]                                  |uo_out[6]                                  
 uo_out[7]                                  |uo_out[7]                                  
+uo_out[6]                                  |uo_out[6]                                  
+uo_out[5]                                  |uo_out[5]                                  
+ui_in[4]                                   |ui_in[4]                                   
+ui_in[3]                                   |ui_in[3]                                   
+ui_in[2]                                   |ui_in[2]                                   
+ena                                        |ena                                        
+uio_in[4]                                  |uio_in[4]                                  
+uio_in[3]                                  |uio_in[3]                                  
+uio_in[2]                                  |uio_in[2]                                  
+uio_in[1]                                  |uio_in[1]                                  
+uio_in[0]                                  |uio_in[0]                                  
+ui_in[7]                                   |ui_in[7]                                   
+ui_in[6]                                   |ui_in[6]                                   
+ui_in[5]                                   |ui_in[5]                                   
+uo_out[4]                                  |uo_out[4]                                  
+uo_out[3]                                  |uo_out[3]                                  
+uo_out[2]                                  |uo_out[2]                                  
+uio_in[7]                                  |uio_in[7]                                  
+uio_in[6]                                  |uio_in[6]                                  
+uio_in[5]                                  |uio_in[5]                                  
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes tt_um_lelo_gr01_analogicus and tt_um_lelo_gr01_analogicus are equivalent.

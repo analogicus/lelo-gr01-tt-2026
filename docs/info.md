@@ -1,14 +1,19 @@
-<!---
+- **Repository:** [https://github.com/analogicus/lelo_gr01_sky130a](https://github.com/analogicus/lelo_gr01_sky130a)
+- **Documentation:** [https://analogicus.github.io/lelo_gr01_sky130a](https://analogicus.github.io/lelo_gr01_sky130a)
 
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
-
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
+# Skywater 130nm Temperature sensor
 
 ## Who
 Nicolas, Nikolai and Walter, aka. Group 1
+
+# DISCLAIMER
+
+The LVS is not passing due to a NetGen bug. When LVS is bypassed in simulation, it simulates fine with LPE included. Regular "make cdl lvs" also works, it is just when doing "make lpe" that it crashes at the LVS stage.
+
+![](linearity_error_layout_17_04_26.png)
+<sub> Figure 0.1: The linearity error with parasitics (Typical). </sub>
+
+
 
 ## Why
 
@@ -42,7 +47,7 @@ Waveforms are shown below.
 
 In order to get a digital value for the temperature, we used a counter that counts the number of pulses from the oscillator during a period of a reference clock at 32768Hz. This counter has been designed in System Verilog according to this FSM:
 
-![](rtl/AIC_FSM.svg)
+![](AIC_FSM.svg)
 
 <sub> Figure 1: Finite state machine used for the counter </sub>
 
@@ -51,7 +56,7 @@ It outputs the number of pulses detected, the wire pwr which is used to powerup 
 
 With a 2MHz oscillator signal, we get the following waveforms:
 
-![](rtl/waveform.png)
+![](waveform.png)
 
 <sub> Figure 2: Example of a waveform from the FSM </sub>
 
@@ -59,7 +64,7 @@ When the request signal is received, the FSM start to power up the analog part a
 
 We can plot the output of the counter in function of the oscillator frequency, as shown in the next figure:
 
-![](rtl/counter_plot.png)
+![](counter_plot.png)
 
 <sub> Figure 3: Output of the counter in function of the oscillator frequency </sub>
 
@@ -78,18 +83,100 @@ For testing the digital module, we made an oscillator simulator, which reads fro
 | Oscillation frequency | 1.7     | 2.3             | 3.1     | MHz   |
 | Temperature           | -40     | 27              | 125     | C     |
 
+## Simulation Graphs
+
+
+### Full system: Typical runs
+
+![](typical_result_25_03_2026.png)
+
+<sub> Figure 8: Several plots showing different aspects of the full system. Top left: The oscillator frequency compared to a linear approximation. Top Right: our "count" compared to a perfect theoretical float count. Bottom left: Total error of all parts (digital and analog) per measurement in percent compared to a theoretical perfectly linear system. Bottom right: The digital error, analog error removed </sub>
+
+### Full system: Montecarlo simulations
+
+![](MC_results_plot_25_03_2026.png)
+
+<sub> Figure 9: Results of Montecarlo simulations fed through the digital system. </sub>
+
+## What
+
+
+| What                 |        Cell/Name                       |
+| :----                |  :----:                                |
+| Schematic Top level  | design/LELO_GR01_SKY130A/LELO_GR01.sch |
+| Schematic Oscillator | design/LELO_GR01_SKY130A/oscillator.sch|
+| Schematic Bandgap    | design/LELO_GR01_SKY130A/bandgap.sch   |
+| Schematic Diff Amp   | design/LELO_GR01_SKY130A/diffamp_1.sch |
+| Schematic GM Cell    | design/LELO_GR01_SKY130A/GM_cell.sch   |
+| RTL digital module   | rtl/LELO_TEMP.sv                       | 
+
+
+
+## Signal interface
+
+### Top level
+
+| Signal       | Direction | Domain  | Description                               |
+| :---         | :---:     | :---:   | :---                                      |
+| VDD_1V8      | Input     | VDD_1V8 | 1.8V Main supply                          |
+| VSS          | Input     | Ground  |                                           |
+| PWRUP_1V8    | Input     | VDD_1V8 | Power up the circuit                      |
+| OSC_TEMP_1V8 | Output    | VDD_1V8 | Temperature dependent frequency           |
+| :---         | :---:     | :---:   | :---                                      |
+| CLK          | Input     | VDD_1V8 | 32.768kHz clock for digital               |
+| Request      | Input     | VDD_1V8 | Input signal to request measurement       |
+| Done         | Output    | VDD_1V8 | Signal to indicate that value is ready    |
+| Out          | Output    | VDD_1V8 | Output value in counts (8 bits)           |
+
+### Bandgap
+
+| Signal       | Direction | Domain  | Description                                    |
+| :---         | :---:     | :---:   | :---                                           |
+| VDD_1V8      | Input     | VDD_1V8 | 1.8V Main supply                               |
+| VSS          | Input     | Ground  |                                                |
+| PWRUP_1V8    | Input     | VDD_1V8 | Power up the circuit, not currently used       |
+| VREF         | Output    | VDD_1V8 | 1.27V reference voltage generated              |
+| IPTAT        | Output    | VDD_1V8 | PTAT current which increases with temperature  |
+
+### Oscillator
+
+| Signal       | Direction | Domain  | Description                               |
+| :---         | :---:     | :---:   | :---                                      |
+| VDD_1V8      | Input     | VDD_1V8 | 1.8V Main supply                          |
+| VSS          | Input     | Ground  |                                           |
+| VREF_BG      | Input     | VDD_1V8 | 1.27V reference voltage generated         |
+| IBP_B        | Input     | VDD_1V8 | PTAT current to drive the oscillations    |
+| OSC_TEMP_1V8 | Output    | VDD_1V8 | Temperature dependent frequency           |
+
+### Diffamp
+
+| Signal       | Direction | Domain  | Description                               |
+| :---         | :---:     | :---:   | :---                                      |
+| VDD_1V8      | Input     | VDD_1V8 | 1.8V Main supply                          |
+| VSS          | Input     | Ground  |                                           |
+| VIP          | Input     | VDD_1V8 | Positive input voltage                    |
+| VIN          | Input     | VDD_1V8 | Negative input voltage                    |
+| VOUT         | Output    | VDD_1V8 | Output voltage                            |
+
+### GM Cell
+
+| Signal       | Direction | Domain  | Description                               |
+| :---         | :---:     | :---:   | :---                                      |
+| VDD_1V8      | Input     | VDD_1V8 | 1.8V Main supply                          |
+| VSS          | Input     | Ground  |                                           |
+| IBP          | Output    | VDD_1V8 | Output current, approx 10uA at 27C        |
+
 ### Digital Counter
 
 | Signal          | Direction | Domain  | Description                               |
 | :---            | :---:     | :---:   | :---                                      |
-| clk             | Input     | VDD_1V8 | 32.768kHz, or slower, reference clock                 |
+| clk             | Input     | VDD_1V8 | 32.768kHz reference clock                 |
 | rst             | Input     | VDD_1V8 | Active high reset                         |
 | request         | Input     | VDD_1V8 | Start a temperature measurement           |
 | oscillator_clk  | Input     | VDD_1V8 | Oscillator signal to count                |
 | pwr             | Output    | VDD_1V8 | Powers up the analog circuits             |
 | done            | Output    | VDD_1V8 | Pulses when measurement is complete       |
 | out             | Output    | VDD_1V8 | 8-bit pulse count result                  |
-
 
 
 ## How to test
@@ -100,11 +187,8 @@ There are two options
 1. Set ui_in[0] (request) high, wait for uo_out[1] (done). Read uio_out[7:0]
 
 
-
 ## External hardware
 
 No need for external hardware. Maybe a logic analyzer if you want to detect the
 oscillation frequency. You could use your finger to change the chip temp (make
 sure you ground yourself first to dissapate any charge difference)
-
-  
