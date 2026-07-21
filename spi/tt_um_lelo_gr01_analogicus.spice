@@ -15,15 +15,15 @@
 *.opin uo_out<0>
 *.opin uo_out<1>
 x8 VDPWR VGND JNWTR_TAPCELLB_CV
-x9 TIE_L VDPWR VGND JNWTR_TIEL_CV
-R1<7> TIE_L uio_oe<7> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
-R1<6> TIE_L uio_oe<6> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
-R1<5> TIE_L uio_oe<5> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
-R1<4> TIE_L uio_oe<4> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
-R1<3> TIE_L uio_oe<3> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
-R1<2> TIE_L uio_oe<2> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
-R1<1> TIE_L uio_oe<1> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
-R1<0> TIE_L uio_oe<0> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
+x9 TIE_H VDPWR VGND JNWTR_TIEH_CV
+R1<7> TIE_H uio_oe<7> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
+R1<6> TIE_H uio_oe<6> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
+R1<5> TIE_H uio_oe<5> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
+R1<4> TIE_H uio_oe<4> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
+R1<3> TIE_H uio_oe<3> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
+R1<2> TIE_H uio_oe<2> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
+R1<1> TIE_H uio_oe<1> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
+R1<0> TIE_H uio_oe<0> sky130_fd_pr__res_generic_m4 W=0.3 L=0.3 m=1
 x1 VDPWR uo_out<0> net1 VGND LELO_GR01
 x2 VDPWR VGND clk pwrup_digital net2 uo_out<1> ui_in<0> uio_out<7> uio_out<6> uio_out<5> uio_out<4> uio_out<3> uio_out<2>
 + uio_out<1> uio_out<0> uo_out<0> digital
@@ -45,15 +45,15 @@ XMP1 AVDD AVDD AVDD AVDD JNWTR_PCHDL
 .ends
 
 
-* expanding   symbol:  JNW_TR_SKY130A/JNWTR_TIEL_CV.sym # of pins=3
-** sym_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/JNW_TR_SKY130A/JNWTR_TIEL_CV.sym
-** sch_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/JNW_TR_SKY130A/JNWTR_TIEL_CV.sch
-.subckt JNWTR_TIEL_CV Y AVDD AVSS
+* expanding   symbol:  JNW_TR_SKY130A/JNWTR_TIEH_CV.sym # of pins=3
+** sym_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/JNW_TR_SKY130A/JNWTR_TIEH_CV.sym
+** sch_path: /Users/wulff/data/2023/aicex/ip/lelo_gr01_sky130a/design/JNW_TR_SKY130A/JNWTR_TIEH_CV.sch
+.subckt JNWTR_TIEH_CV Y AVDD AVSS
 *.iopin Y
 *.iopin AVDD
 *.iopin AVSS
-XMN0 Y A AVSS AVSS JNWTR_NCHDL
-XMP0 A A AVDD AVDD JNWTR_PCHDL
+XMN0 A A AVSS AVSS JNWTR_NCHDL
+XMP0 Y A AVDD AVDD JNWTR_PCHDL
 .ends
 
 

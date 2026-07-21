@@ -5,7 +5,7 @@
 #- Temperature sensor Group 1
 lelo_gr01_sky130a:
   remote: git@github.com:analogicus/lelo_gr01_sky130a.git
-  revision: 639b99ca59f2b180a260b84cf1af96d39f7edb81
+  revision: 7eacfc869a7482baadda51aba7212bd0d67ab291
 
 #- Carsten's PDK. Borders, symbols, loop stability
 cpdk:
