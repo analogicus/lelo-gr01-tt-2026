@@ -5,7 +5,7 @@
 #- Temperature sensor Group 1
 lelo_gr01_sky130a:
   remote: git@github.com:analogicus/lelo_gr01_sky130a.git
-  revision: 7eacfc869a7482baadda51aba7212bd0d67ab291
+  revision: 3d6ca8a712be5edf943977147f96c9ed0bff3d7f
 
 #- Carsten's PDK. Borders, symbols, loop stability
 cpdk:
@@ -15,7 +15,7 @@ cpdk:
 #- Technology library
 tech_sky130A:
   remote: git@github.com:wulffern/tech_sky130A.git
-  revision: a83e8ea51f159c4e2cee91791fe3748ea0e39efd
+  revision: 1acb8778b57c8c9d5335de142754de5946c3c6aa
 
 #- Analog transistor library
 jnw_atr_sky130a:
@@ -25,9 +25,9 @@ jnw_atr_sky130a:
 #- Standard cells
 jnw_tr_sky130a:
   remote: git@github.com:analogicus/jnw_tr_sky130A.git
-  revision: 4e76dc75ea9ad1617c20e1f4229c333765911082
+  revision: f1b7809ae86886694ff243b163c28d8783458a53
 
 #- Standard transistors (sky130A)
 lelo_atr_sky130a:
   remote: git@github.com:wulffern/lelo_atr_sky130a.git
-  revision: 6eb2a946e1f7f977217aa81e0b315cec60d5c8fc
+  revision: 324ff03909c121a669d3f5761db6b3b11b003c52

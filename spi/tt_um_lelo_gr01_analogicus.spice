@@ -29,9 +29,9 @@ x2 VDPWR VGND clk pwrup_digital net2 uo_out<1> ui_in<0> uio_out<7> uio_out<6> ui
 + uio_out<1> uio_out<0> uo_out<0> digital
 x3 rst_n net2 VDPWR VGND JNWTR_IVX1_CV
 x4 pwrup_digital ui_in<1> net1 VDPWR VGND JNWTR_ORX1_CV
-XD1<2> VGND ui_in<0> sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=1.8e6
-XD1<1> VGND ui_in<1> sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=1.8e6
-XD1<0> VGND rst_n sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=1.8e6
+XD1<2> VGND ui_in<0> sky130_fd_pr__diode_pw2nd_05v5 area=2.025e-13 perim=1.8e-06
+XD1<1> VGND ui_in<1> sky130_fd_pr__diode_pw2nd_05v5 area=2.025e-13 perim=1.8e-06
+XD1<0> VGND rst_n sky130_fd_pr__diode_pw2nd_05v5 area=2.025e-13 perim=1.8e-06
 .ends
 
 * expanding   symbol:  JNW_TR_SKY130A/JNWTR_TAPCELLB_CV.sym # of pins=2
